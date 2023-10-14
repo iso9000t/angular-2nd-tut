@@ -1,0 +1,52 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+# Uncomment the next line in case you will use bower
+# /bower_components
+
+# Dependencies
+/node_modules
+
+# IDE - VSCode directories
+.vscode/
+
+# User-specific files
+*.rs.user 
+*.suo 
+*.user 
+*.userosscache 
+*.sln.docstates
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Installer logs
+*.cab
+*.msi
+*.msm
+*.msp
+*.pdb
+
+# Debug output
+/npm-debug.log
+
+# Yarn integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# System Files
+.DS_Store
+Desktop.ini
+
+# TypeScript auto generated files
+*.tgz
+*.pid
+*.log
+*.ipc
+
+# TSLint config file
+tslint.json

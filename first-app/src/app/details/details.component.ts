@@ -81,8 +81,16 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.housingLocationId = Number(this.route.snapshot.params["id"]);
-    this.housingLocation = this.housingService.getHousingLocationById(
+
+    this.housingService.getHousingLocationById(this.housingLocationId)
+      .subscribe(
+        housingLocation => {
+          this.housingLocation = housingLocation;
+        },
+        error => console.error(error)
+      )
+   /*  this.housingLocation = this.housingService.getHousingLocationById(
       this.housingLocationId
-    );
+    ); */
   }
 }

@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   housingLocationList: HousingLocation[] = [];
   filteredLocationList: HousingLocation[] = [];
 
-  constructor(private housingService: HousingService) {}
+  constructor(private housingService: HousingService) { }
 
   filterResults(text: string) {
     if (!text) {
@@ -41,7 +41,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
-    this.filteredLocationList = this.housingLocationList;
+    this.housingService.getAllHousingLocations().subscribe(
+      housingLocationList => {
+        this.housingLocationList = housingLocationList;
+        this.filteredLocationList = housingLocationList;
+      }
+    );
   }
 }
